@@ -14,7 +14,9 @@
 </div>
 <div class="container">
   <h2>Blog Options</h2>
-  <button>View all posts</button>
+  <form action="/show_all" method="get">
+    <input type="submit" value="View All posts">
+  </form>
   <form action="/find_individual" method="post">
     <input type="text" value="enter blog title">
     <input type="submit" value="find post">
@@ -25,10 +27,11 @@
   </form>
   <form action="/edit_existing" method="post">
     <input type="text" value="Post title to edit" name="post_title">
-    <input type="submit" value="edit">
+     <input type="hidden" name="_method" value="put">
+    <input type="submit" value="update">
   </form>
-  <form action="/delete" method="delete">
+  <form action="/delete" method="post">
     <input type="text" value="Post title to delete">
-    <input type="submit" value="delete">
+    <input name="_method" type="submit" value="delete">
   </form>
 </div>

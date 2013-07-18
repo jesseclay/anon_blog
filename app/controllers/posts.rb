@@ -5,7 +5,13 @@ post '/create_post' do
   erb :index
 end
 
-post '/find_individual' do
+get '/show_all' do
+  @posts = Post.all
+  erb :all_posts
+end
+
+
+get '/find_individual' do
 
 end
 
@@ -13,11 +19,11 @@ post '/display_all_by_category' do
 
 end
 
-post '/edit_existing' do
-
+put '/edit_existing' do
+  puts "hello!"
 end
 
-post '/delete' do
+delete '/delete' do
 
 end
 
