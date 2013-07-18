@@ -9,6 +9,26 @@
     <p>Post Content</p>
     <textarea name="content" cols="40" rows="10"></textarea>
     <br>
-    <input type="submit" name="create post">
+    <input type="submit" value="Create Post">
+  </form>
+</div>
+<div class="container">
+  <h2>Blog Options</h2>
+  <button>View all posts</button>
+  <form action="/find_individual" method="post">
+    <input type="text" value="enter blog title">
+    <input type="submit" value="find post">
+  </form>
+  <form action="/display_all_by_category" method="post">
+    <input type="text" value="Category to display">
+    <input type="submit" value="show">
+  </form>
+  <form action="/edit_existing" method="post">
+    <input type="text" value="Post title to edit" name="post_title">
+    <input type="submit" value="edit">
+  </form>
+  <form action="/delete" method="delete">
+    <input type="text" value="Post title to delete">
+    <input type="submit" value="delete">
   </form>
 </div>
