@@ -5,6 +5,5 @@ class CreateTags < ActiveRecord::Migration
       t.belongs_to :category
       t.timestamps
     end
-
   end
 end
