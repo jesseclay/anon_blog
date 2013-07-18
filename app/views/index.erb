@@ -1,4 +1,14 @@
 <div class="container">
   <h1>Anonymous blog</h1>
-  <p>Hello, world!</p>
+
+  <form action="/create_post" method="post">
+    <p>Author name</p>
+    <input type="text" name="author">
+    <p>Post Title</p>
+    <input type="textarea" name="title">
+    <p>Post Content</p>
+    <textarea name="content" cols="40" rows="10"></textarea>
+    <br>
+    <input type="submit" name="create post">
+  </form>
 </div>
