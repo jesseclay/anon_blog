@@ -10,9 +10,9 @@ get '/show_all' do
   erb :all_posts
 end
 
-
-get '/find_individual' do
-
+post '/find_individual' do
+  @post = Post.where(title: params[:post_title]).first
+  erb :single_post
 end
 
 post '/display_all_by_category' do
@@ -20,10 +20,11 @@ post '/display_all_by_category' do
 end
 
 put '/edit_existing' do
-  puts "hello!"
+  # @post = Post.where(title: params[:post_title]).first
+  # erb :single_post
 end
 
 delete '/delete' do
-
+  
 end
 

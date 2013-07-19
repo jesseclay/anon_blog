@@ -1,18 +1,21 @@
 <div class="container">
-  <h1>All posts</h1>
-    <%if @posts
-        @posts.each do |post| %>
-    <header>
+  <h1>Search by post title</h1>
+    <%if @post%>
+      <header>
+        <h2><%= @post.title %></h1>
+        <h4><%= @post.author %></h4>
+      <div class="content">
+        <section> 
+          <%= @post.content %>
+        </section>
+      </div>
+      </header>
+    <%else%>
     <div class="content">
-      <h2><%= post.title %></h2>
-      <h4><%= post.author %></h4>
-      <section> 
-        <%= post.content %>
-      </section>
+      <p>Sorry, it appears that your post doesn't exist :/ </p>
+      
     </div>
-        </header>
-      <%end%>
-    <%end%> 
+    <%end%>
     <!-- <div class="pagination">
       <a href="page1.html" class="disabled">&lt;&lt; Previous</a>
       <ol>
@@ -28,4 +31,5 @@
     <div class="footer">
       Copyright &copy; 2013 Awesome People, Inc.
     </div> -->
+
 </div>
