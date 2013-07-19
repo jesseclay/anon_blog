@@ -20,20 +20,20 @@
     <input type="submit" value="View All posts">
   </form>
   <form action="/find_individual" method="post">
-    <input type="text" value="Enter blog title" name="post_title">
+    <input type="text" placeholder="Enter blog title" name="post_title">
     <input type="submit" value="find post">
   </form>
   <form action="/display_all_by_category" method="post">
-    <input type="text" value="Category to display">
+    <input type="text" placeholder="Category to display">
     <input type="submit" value="show">
   </form>
   <form action="/edit_existing" method="post">
-    <input type="text" value="Post title to edit" name="post_title">
+    <input type="text" placeholder="Post title to edit" name="post_title">
      <input type="hidden" name="_method" value="put">
     <input type="submit" value="update">
   </form>
   <form action="/delete" method="post">
-    <input type="text" value="Post title to delete">
+    <input type="text" placeholder="Post title to delete">
     <input name="_method" type="submit" value="delete">
   </form>
 </div>
