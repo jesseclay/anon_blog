@@ -1,7 +1,14 @@
 post '/create_post' do
-  Post.create(author: params[:author],
+  # Post.create(author: params[:author],
+  #             title: params[:title],
+  #             content: params[:content]
+  #             ).categories.create(category: params[:category])
+
+  post = Post.create(author: params[:author],
               title: params[:title],
               content: params[:content])
+  post.categories << Category.create(category: params[:category])
+
   erb :index
 end
 
@@ -25,6 +32,6 @@ put '/edit_existing' do
 end
 
 delete '/delete' do
-  
+
 end
 

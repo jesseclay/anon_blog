@@ -1,11 +1,12 @@
 <div class="container">
   <h1>All posts</h1>
-    <%if @posts
-        @posts.each do |post| %>
+    <%if @posts %>
+        <% @posts.each do |post| %>
     <header>
     <div class="content">
       <h2><%= post.title %></h2>
       <h4><%= post.author %></h4>
+      <h6><%= post.categories.first.category %></h6>
       <section> 
         <%= post.content %>
       </section>
