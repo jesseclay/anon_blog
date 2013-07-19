@@ -32,7 +32,10 @@ put '/edit_existing' do
 end
 
 delete '/delete' do
-  Post.where(title: params[:post_title]).first.destroy
+  post = Post.where(title: params[:post_title]).first
+  if post
+    post.destroy
+  end
   erb :index
 end
 
